@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="styles.css" />
+<title>İBRAHİM ANLİ FIGHT CLUB</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+
+</head>
+
+<body>
+
+<script>
+function calculateBMI() {
+let heightInput = document.getElementById("height").value;
+let weightInput = document.getElementById("weight").value;
+
+heightInput = heightInput.replace(",", ".");
+weightInput = weightInput.replace(",", ".");
+
+let height = parseFloat(heightInput);
+let weight = parseFloat(weightInput);
+
+if (!height || !weight) {
+document.getElementById("result").innerHTML = "Lütfen değer girin!";
+return;
+}
+
+if (height > 3) {
+height = height / 100;
+}
+
+let bmi = (weight / (height * height)).toFixed(1);
+let status = "";
+
+if (bmi < 18.5) status = "Zayıf";
+else if (bmi < 25) status = "Normal";
+else if (bmi < 30) status = "Fazla Kilolu";
+else status = "Obez";
+
+document.getElementById("result").innerHTML =
+"BMI: " + bmi + " (" + status + ")";
+}
+
+function clearBMI() {
+document.getElementById("height").value = "";
+document.getElementById("weight").value = "";
+document.getElementById("result").innerHTML = "";
+}
+</script>
+
+<header>
+<nav>
+<div class="nav__header">
+<div class="nav__logo">
+<a href="#">
+<img src="assets/logo.png" alt="logo" />
+</a>
+</div>
+<div class="nav__menu__btn" id="menu-btn">
+<i class="ri-menu-line"></i>
+</div>
+</div>
+
+<ul class="nav__links" id="nav-links">
+<li><a href="#home">ANASAYFA</a></li>
+<li><a href="#about">HAKKIMIZDA</a></li>
+<li><a href="#coaching">ÖZEL DERS</a></li>
+<li><a href="#nedenbiz">NEDEN BİZ?</a></li>
+<li><a href="#gallery">GALERİ</a></li>
+<li><a href="#video">VİDEOLAR</a></li>
+<li><a href="#contact">ŞUBELERİMİZ</a></li>
+<li></li>
+</ul>
+</nav>
+<div class="app-badge">
+  <a href="https://apps.apple.com/tr/app/i-brahi-m-anli-fight-club/id6475046510?l=tr" target="_blank">
+    <img src="assets/app store logo.png" alt="App Store’dan indirin">
+  </a>
+</div>
+<div class="playstore-badge">
+  <a href="https://play.google.com/store/apps/details?id=com.maksigym.maksisoft.ibrahimanlifightclub" target="_blank">
+    <img src="assets/play store logo.png" alt="Play Store’dan indirin">
+  </a>
+</div>
+
+
+<div class="section__container header__container" id="home">
+<div class="header__image">
+<img src="assets/header.png" alt="header" />
+</div>
+
+<div class="header__content">
+<h1>Gücünle Tanışmaya Hazır mısın?</h1>
+
+<p class="section__description">
+Her yumrukta cesaretini,
+her antrenmanda gerçek potansiyelini keşfet.
+Şimdi eldivenlerini giy ve değişimi başlat.
+</p>
+
+<div class="kitle-endeksi">
+<h3>Vücut Kitle Endeksi</h3>
+<input type="number" id="height" placeholder="Boy (cm)" />
+<input type="number" id="weight" placeholder="Kilo (kg)" />
+<button onclick="calculateBMI()">Hesapla</button>
+<button onclick="clearBMI()" class="clear-btn">Sil</button>
+<p id="result"></p>
+</div>
+
+<div class="header__stats">
+<div>
+<h4>10+</h4>
+<p>Uzman Kadro</p>
+</div>
+<div>
+<h4>5.000+</h4>
+<p>Tamamlanan Antrenman</p>
+</div>
+<div>
+<h4>135+</h4>
+<p>Program</p>
+</div>
+</div>
+
+</div>
+</div>
+</header>
+
+<section class="about" id="about">
+<div class="section__container about__container">
+<div class="about__image">
+<img src="assets/antrenör.jpg" alt="about" />
+</div>
+<div class="about__content">
+<h2 class="section__header">Hedeflerinize Ulaşmaya Hazır Olun!</h2>
+<p class="section__description">
+Sana özel programlar, uzman destek ve yüksek motivasyonla
+hedeflerine ulaşman artık çok daha kolay. Güçlen, hızlan,
+sınırlarını aş!
+</p>
+<p class="section__description">
+Bugün başla, yarının en güçlü versiyonu ol!
+</p>
+<div class="about__btn">
+  <a href="https://wa.me/905305412389" class="btn" target="_blank">
+    Şimdi Başla
+  </a>
+</div>
+
+</section>
+	
+<section class="private-lesson" id="coaching">
+  <div class="section__container private__container">
+    <h2 class="section__header">Özel Dersler</h2>
+
+    <div class="lesson-grid">
+      
+      <div class="lesson-card">
+        <h3>Neden Çocuk Boksu?</h3>
+        
+          Akran zorbalıklarına karşı kendini savunabilmesi için hazırlanır. 
+          Amacımız kavga etmeyi öğretmek değil; çocukların kendini doğru ifade edebilmesini 
+          ve gerektiğinde bilinçli şekilde kendini koruyabilmesini sağlamaktır.
+       
+		  <h5>Veliler İçin Mesaj</h5>
+
+<p>Derslerimiz profesyonel eğitmen kontrolünde, güvenli ekipmanlarla yapılmaktadır.</p>
+		  
+        <a href="https://wa.me/905305412389" class="btn" target="_blank">Detaylı Bilgi</a>
+      </div>
+
+      <div class="lesson-card">
+        <h3>Kadın Boksu</h3>
+        
+          Kadınlar için özel antrenman programı. Gücünü hisset, korkularını geride bırak,
+          ringdeki cesaretini hayata taşı.
+       
+		  <h5>Neden Özel Ders?</h5>
+		  <p>Özel derslerde tüm dikkat eğitmendedir. Teknik hatalar anında düzeltilir, performansınız birebir takip edilir ve gelişiminiz hızlanır. Grup derslerine göre daha hızlı sonuç alırsınız.</p>
+		  
+        <a href="https://wa.me/905305412389" class="btn" target="_blank">Detaylı Bilgi</a>
+      </div>
+
+      <div class="lesson-card">
+        <h3>Erkek Boksu</h3>
+        
+          Erkekler için güç ve dayanıklılık programı. Her antrenmanda sınırlarını aş,
+          her darbede sağlam dur.
+       
+        <h5>Teknik ve Strateji</h5>
+        <p>
+          Darbe Tekniği: Doğru yumruk teknikleri, savunma hareketleri ve stratejik antrenmanlar.<br>
+          Hız ve Refleks: Reflekslerini geliştirir, hızlı karar alma yeteneğini artırır.
+        </p>
+       
+        <a href="https://wa.me/905305412389" class="btn" target="_blank">Detaylı Bilgi</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+
+</section>
+
+	
+
+<section class="program" id="program">
+<div class="section__container program__container">
+<div class="program__header">
+<h2 class="section__header">Sizi Güçlendiren Programlar</h2>
+<p class="section__description">
+Sadece güç değil; hız, denge, teknik, strateji ve disiplin gerektirir.
+Boks aynı zamanda özgüven, dayanıklılık ve mental güç kazandırır.
+</p>
+</div>
+
+<div class="program__grid">
+
+<div class="program__card">
+<img src="assets/çocuk.png" alt="program" />
+<h4>Çocuk Boks</h4>
+<p>Minik yumruklar, büyük özgüven! sadece yumruk atmayı değil,
+kendini savunmayı, sınır koymayı ve dimdik durmayı öğretir.</p>
+</div>
+
+<div class="program__card">
+<img src="assets/indir11.png" alt="program" />
+<h4>Kadın Boks</h4>
+<p>Kadın boksu sadece bir spor değil, bir duruştur.
+
+Gücünü hisset, korkularını geride bırak,
+ringdeki cesaretini hayata taşı.
+
+Çünkü güçlü kadın, her yerde kazanır.</p>
+</div>
+
+<div class="program__card">
+<img src="assets/erkekboks.png" alt="program" />
+<h4>Erkek Boks</h4>
+<p>Erkek boksu; sadece güçlü olmak değil, güçlü kalabilmektir.
+
+Her antrenmanda sınırlarını aşar,
+her darbede daha da sağlam durursun.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="service" id="nedenbiz">
+<div class="section__container service__container">
+<div class="service__content">
+
+<h2 class="section__header">Neden Biz?</h2>
+
+<ul class="service__list">
+<li>
+<h4><span><i class="ri-checkbox-circle-fill"></i></span>Kişiye Özel Ders</h4>
+<p class="section__description">Profesyonel antrenörlerimizden bire bir rehberlik alarak hedeflerinize özel hazırlanmış planlar edinin.</p>
+</li>
+
+<li>
+<h4><span><i class="ri-checkbox-circle-fill"></i></span>Uzman Eğitmen</h4>
+<p class="section__description">Tecrübeli antrenör kadromuz gelişiminizi yakından takip eder ve sizi hedeflerinize güvenle ulaştırır.</p>
+</li>
+
+<li>
+<h4><span><i class="ri-checkbox-circle-fill"></i></span>Özgüven ve Karakter Gelişimi</h4>
+<p class="section__description">Çocuklarımız sadece boks öğrenmez; disiplin, özgüven ve kendini savunma bilinci kazanır. Güçlü bireyler yetiştiririz.</p>
+</li>
+
+
+<li>
+<h4><span><i class="ri-checkbox-circle-fill"></i></span>Modern Ekipman</h4>
+<p class="section__description">Profesyonel ring, kum torbaları ve dayanıklı antrenman ekipmanlarıyla gerçek boks atmosferini yaşarsınız.</p>
+</li>
+</ul>
+
+<div class="service__btn">
+  <a href="tel:+905305412389" class="btn">
+    Bugün Katılın
+  </a>
+</div>
+
+
+</div>
+	
+	
+
+<div class="service__image">
+<img src="assets/service.png" alt="service" />
+</div>
+
+</div>
+</section>
+
+<footer>
+	<section id="gallery" class="gallery">
+
+  <div class="section__container">
+    <h2 class="section__header" style="text-align:center; margin-bottom:50px;">
+      GALERİ
+    </h2>
+
+    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+
+      <a href="assets/ibrahimanli.jpg" data-lightbox="fight-gallery">
+        <img src="assets/ibrahimanli.webp" width="300" style="border-radius:10px;">
+      </a>
+
+      <a href="assets/arena.jpg" data-lightbox="fight-gallery">
+        <img src="assets/arena.webp"  width="300" style="border-radius:10px;">
+      </a>
+
+      <a href="assets/resim5.jpg" data-lightbox="fight-gallery">
+        <img src="assets/resim5.webp" width="300" style="border-radius:10px;">
+      </a>
+		
+		<a href="assets/resim 2.jpg" data-lightbox="fight-gallery">
+        <img src="assets/resim 2.webp"  width="300" style="border-radius:10px;">
+      </a>
+		
+		<a href="assets/resim7.jpg" data-lightbox="fight-gallery">
+        <img src="assets/resim7.webp"  width="300" style="border-radius:10px;">
+      </a>
+		<a href="assets/resim6.webp" data-lightbox="fight-gallery">
+        <img src="assets/resim61.webp"  width="300" style="border-radius:10px;">
+      </a>
+
+    </div>
+  </div>
+</section>
+<section id="videolar" class="videolar">
+
+  <div class="section__container">
+
+    <h2 class="section__header" style="text-align:center; margin-bottom:50px;">
+      VİDEOLAR
+    </h2>
+
+    <div class="video-grid" id="video">
+
+      <video controls>
+        <source src="MP4/VİDEO1.mp4" type="video/mp4">
+      </video>
+
+      <video controls>
+        <source src="MP4/VİDEO2.mp4" type="video/mp4">
+      </video>
+
+      <video controls>
+        <source src="MP4/VİDEO4.mp4" type="video/mp4">
+      </video>
+		
+		<video controls>
+        <source src="MP4/VİDEO5.mp4" type="video/mp4">
+      </video>
+		
+		<video controls>
+        <source src="MP4/VİDEO6.mp4" type="video/mp4">
+      </video>
+		
+		<video controls>
+        <source src="MP4/VİDEO7.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="section__container footer__container">
+
+<div class="footer__col">
+<h4>İbrahim Anli Figt Club</h4>
+<ul class="footer__links">
+<li><a href="#about">Hakkımızda</a></li>
+<li><a href="#nedenbiz">Neden Biz?</a></li>
+</ul>
+</div>
+	
+
+<div class="footer__col">
+<h4>Programlar</h4>
+<ul class="footer__links">
+<li><a href="#program">Çocuk Boks</a></li>
+<li><a href="#program">Kadın Boks</a></li>
+<li><a href="#program">Erkek Boks </a></li>
+</ul>
+</div>
+
+<div class="footer__col" id="contact">
+<h4>İletişim</h4>
+<ul class="footer__links">
+<li><a href="tel:+905305412389"><span><i class="ri-phone-fill"></i></span>0530 541 23 89</a></li>
+<li><a href="mailto:anli.ibrahim@hotmail.com"><span><i class="ri-mail-fill"></i></span>anli.ibrahim@hotmail.com</a></li>
+</ul>
+</div>
+
+<div class="footer__col">
+<h4>Şubelerimiz</h4>
+<div class="branch">
+<a href="https://share.google/wswnwrCmr6HvbwvPK"><span><i class="ri-map-pin-2-fill"></i></span>Zekeriyaköy Mah. 4. Cad. No:1/2 Sarıyer/İSTANBUL</a>
+<a href="https://share.google/n7QqRYj0apgB1lhEJ"><span><i class="ri-map-pin-2-fill"></i></span>INTERNATIONAL MAVİŞEHİR/İZMİR</a>
+</div>
+</div>
+
+</div>
+
+<div class="section__container footer__bar">
+<a href="#" class="footer__logo">
+<img src="assets/logo.png" alt="logo" />
+</a>
+<p>Copyright © 2026</p>
+
+<ul class="footer__socials">
+<li><a href="https://www.instagram.com/ibrahimanlifightclub"><i class="ri-instagram-fill"></i></a></li>
+<li><a href="https://wa.me/905305412389"><i class="ri-whatsapp-fill"></i></a></li>
+<li><a href="https://www.facebook.com/ibrahimanlifightclub/"><i class="ri-facebook-fill"></i></a></li>
+<li><a href="https://apps.apple.com/tr/app/i-brahi-m-anli-fight-club/id6475046510?l=tr"><i class="ri-apple-fill"></i></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.maksigym.maksisoft.ibrahimanlifightclub"><i class="ri-google-play-fill"></i></a></li>
+</ul>
+</div>
+
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+</body>
+</html>
